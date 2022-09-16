@@ -72,7 +72,7 @@
 	    <hr>
 	    <div class="row">
 	        <div class="col-12">
-	            <form class="div-bordered" action="" style="padding: 15px;">
+	            <form action="../controller/registrar_cliente.php" method="POST" autocomplete="off" style="padding: 15px;">
 
 	                <fieldset>
 				        <legend><i class="far fa-address-card"></i> &nbsp; Información personal</legend>
@@ -82,12 +82,8 @@
 	                                <div class="">
 	                                    <select class="form-control" name="cliente_tipo_documento_reg" id="cliente_tipo_documento">
 	                                        <option value="" selected="" >Tipo de documento</option>
-	                                        <option value="DNI" >1 - DNI</option>
-	                                        <option value="Cedula" >2 - Cedula</option>
-	                                        <option value="DUI" >3 - DUI</option>
-	                                        <option value="Licencia" >4 - Licencia</option>
-	                                        <option value="Pasaporte" >5 - Pasaporte</option>
-	                                        <option value="Otro" >6 - Otro</option>
+	                                        <option value="1" >1 - Tarjeta de Identidad</option>
+	                                        <option value="2" >2 - Cedula de Ciudadania</option>
 	                                    </select>
 	                                    <label for="cliente_tipo_documento" class="form-label"></label>
 	                                </div>
@@ -95,7 +91,7 @@
 
 	                            <div class="col-12 col-md-6">
 	                                <div class="form-outline mb-4">
-	                                    <input type="text" pattern="[a-zA-Z0-9-]{7,30}" class="form-control" name="cliente_numero_documento_reg" id="cliente_numero_documento" maxlength="30">
+	                                    <input type="number" min="0000000001" class="form-control" name="cliente_numero_documento_reg" id="cliente_numero_documento" max="9999999999">
 	                                    <label for="cliente_numero_documento" class="form-label">Numero de documento <i class="fab fa-font-awesome-alt"></i></label>
 	                                </div>
 	                            </div>

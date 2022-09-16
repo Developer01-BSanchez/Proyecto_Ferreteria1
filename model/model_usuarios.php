@@ -16,9 +16,10 @@ public function login($correo,$clave){
 	if ($resultado){
         $tipo_usuario = $resultado['tipo_usuario_id'];
         if($tipo_usuario=='2'){
-            header ('location:');
+            $_SESSION['correo']= $correo;
+            header ('location:../view/index_user.php');
         }elseif($tipo_usuario=='1'){
-            header ('location:../view/index_user.html');
+            header ('location:');
         }else{
             header ('location:');
         }
@@ -72,11 +73,11 @@ public function insertarUsuariosProcedimientos($nombre,$contrasena,$cargo){
     }
 	
 }
-public function insertarUsuarios($nombre,$contrasena,$cargo){
+public function insertarUsuarios($email,$clave){
     try{ 
-    $sql="INSERT INTO usuario(usu_nombre,usu_contrasena,usu_cargo)VALUES('$nombre','$contrasena','$cargo')";
+    $sql="INSERT INTO usuario(usu_email,usu_contrasena,tipo_usuario_id)VALUES('$email','$clave','2')";
     $this->db->activeConnection()-> prepare($sql)->execute();
-    header("location: ../vista/administrador_academico/usuarios.php");
+    header("location: ../../index.php");
     }
     catch(PDOexception $men){
     var_dump($men->getMessage());

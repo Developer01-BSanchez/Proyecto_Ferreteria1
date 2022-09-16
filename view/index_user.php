@@ -1,3 +1,10 @@
+<?php
+session_start();
+$correo=$_SESSION['correo'];
+
+if(!isset($correo)){
+	header("location:../index.php");
+}else{?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -27,7 +34,7 @@
 	<!-- Header -->
 	<header class="header full-box bg-white">
 	    <div class="header-brand full-box">
-	        <a href="index_user.html">
+	        <a href="index_user.php">
 	            <img src="img/logo-escoinfer.png" alt="Designlopers" class="img-fluid">
 	        </a>
 	    </div>
@@ -38,7 +45,7 @@
 						<a>Bienvenido Cliente</a>
 					</li>
 	                <li>
-	                    <a id="inicio" href="index_user.html" >Inicio</a>
+	                    <a id="inicio" href="index_user.php" >Inicio</a>
 	                </li>
 	                <li>
 	                    <a href="menu.html" >Productos</a>
@@ -61,7 +68,7 @@
 	            <a class="dropdown-item" href="javascript:void(0);">
 	                <i class="fab fa-dashcube fa-fw"></i> &nbsp; Dashboard
 	            </a>
-	            <a class="dropdown-item" href="javascript:void(0);">
+	            <a class="dropdown-item" href="cerrar_sesion.php">
 	                <i class="fas fa-sign-out-alt"></i> &nbsp; Cerrar sesión
 	            </a>
 	        </div>
@@ -226,3 +233,6 @@
 	<script src="js/main.js" ></script>
 </body>
 </html>
+<?php
+}
+?>

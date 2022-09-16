@@ -41,7 +41,7 @@
 	                    <a id="inicio" href="index.php" >Inicio</a>
 	                </li>
 	                <li>
-	                    <a href="view/registration.html" >Regístrate</a>
+	                    <a href="view/registration_usuario.php" >Regístrate</a>
 	                </li>
 	            </ul>
 	        </nav>
@@ -83,7 +83,7 @@
 	            <button type="submit" name="btningresar" class="btn btn-primary text-center mb-4 w-100">Ingresar</button>
 	        </form>
 	    </div>
-	    <p class="text-center poppins-regular">¿No tienes cuenta? <a href="view/registration.html" class="font-weight-bold">Regístrate aquí</a></p>
+	    <p class="text-center poppins-regular">¿No tienes cuenta? <a href="view/registration_usuario.php" class="font-weight-bold">Regístrate aquí</a></p>
 	</section>
 
 	<!-- Footer -->

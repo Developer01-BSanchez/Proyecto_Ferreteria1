@@ -3,7 +3,7 @@
 	/*----------  
 	Ruta o dominio del servidor  - Server path or domain
 	----------*/
-	const SERVERURL="http://localhost:8080/tienda/";
+	const SERVERURL="http://localhost:8080/proyecto_ferreteria1/";
 
 
 	/*----------  
