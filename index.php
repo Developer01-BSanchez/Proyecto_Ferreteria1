@@ -3,23 +3,23 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<link rel="icon" href="img/logo-icono.png">
-	<title>Restaurant</title>
+	<link rel="icon" href="view/img/logo-icono.png">
+	<title>Ferreteria E . E</title>
 
 	<!-- Normalize V8.0.1 -->
-	<link rel="stylesheet" href="./css/normalize.css">
+	<link rel="stylesheet" href="view/css/normalize.css">
 
 	<!-- MDBootstrap V5 -->
-	<link rel="stylesheet" href="./css/mdb.min.css">
+	<link rel="stylesheet" href="view/css/mdb.min.css">
 
 	<!-- Font Awesome V5.15.1 -->
-	<link rel="stylesheet" href="./css/all.css">
+	<link rel="stylesheet" href="view/css/all.css">
 
 	<!-- Sweet Alert V10.13.0 -->
-	<script src="./js/sweetalert2.js" ></script>
+	<script src="view/js/sweetalert2.js" ></script>
 
 	<!-- General Styles -->
-	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="view/css/style.css">
 
 </head>
 <body id="main-body">
@@ -27,8 +27,8 @@
 	<!-- Header -->
 	<header class="header full-box bg-white">
 	    <div class="header-brand full-box">
-	        <a href="index_user.html">
-	            <img src="img/logo-escoinfer.png" alt="Designlopers" class="img-fluid">
+	        <a href="index.php">
+	            <img src="view/img/logo-escoinfer.png" alt="Designlopers" class="img-fluid">
 	        </a>
 	    </div>
 	    <div class="header-options full-box">
@@ -38,21 +38,13 @@
 						<a>Ferreteria Escoinfer Escobillas</a>
 					</li>
 	                <li>
-	                    <a id="inicio" href="index_user.html" >Inicio</a>
+	                    <a id="inicio" href="index.php" >Inicio</a>
 	                </li>
 	                <li>
-	                    <a href="menu.html" >Productos</a>
+	                    <a href="view/registration.html" >Regístrate</a>
 	                </li>
 	            </ul>
 	        </nav>
-	        <a href="bag.html" class="header-button full-box text-center" title="Carrito" >
-	            <i class="fas fa-shopping-bag"></i>
-	            <span class="badge bg-primary rounded-pill bag-count" >2</span>
-	        </a>
-
-	        <div class="header-button full-box text-center" id="userMenu" data-mdb-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Nombre de usuario" >
-	            <i class="fas fa-user-circle"></i>
-	        </div>
 	        <div class="dropdown-menu div-bordered popup-login" aria-labelledby="userMenu">
 	            <p class="text-center" style="padding-top: 10px;">
 	                <i class="fas fa-user-circle fa-3x"></i><br>
@@ -77,21 +69,21 @@
 	<section class="container-signin">
 	    <div class="login-content div-bordered mb-4">
 	        <figure class="full-box mb-4">
-	            <img src="img/Avatar_default_male.png" alt="" class="img-fluid login-icon">
+	            <img src="view/img/avatar_contrucción.jpg" alt="" class="img-fluid login-icon">
 	        </figure>
-	        <form action="<?php echo SERVERURL.DASHBOARD; ?>/home/" method="POST" autocomplete="off">
+	        <form action="controller/login.php" method="POST" autocomplete="off">
 	            <div class="form-outline mb-4">
 	                <input type="email" class="form-control" id="login_email" name="login_email" maxlength="50" required="" >
 	                <label for="login_email" class="form-label"><i class="fas fa-envelope-open-text"></i> &nbsp; Email</label>
 	            </div>
 	            <div class="form-outline mb-4">
-	                <input type="password" class="form-control" id="login_clave" name="login_clave" pattern="[a-zA-Z0-9$@.-]{7,100}" maxlength="100" required="" >
+	                <input type="password" class="form-control" id="login_clave" name="login_clave" maxlength="100" required="" >
 	                <label for="login_clave" class="form-label"><i class="fas fa-key"></i> &nbsp; Contraseña</label>
 	            </div>
-	            <button type="submit" class="btn btn-primary text-center mb-4 w-100">Ingresar</button>
+	            <button type="submit" name="btningresar" class="btn btn-primary text-center mb-4 w-100">Ingresar</button>
 	        </form>
 	    </div>
-	    <p class="text-center poppins-regular">¿No tienes cuenta? <a href="registration.html" class="font-weight-bold">Regístrate aquí</a></p>
+	    <p class="text-center poppins-regular">¿No tienes cuenta? <a href="view/registration.html" class="font-weight-bold">Regístrate aquí</a></p>
 	</section>
 
 	<!-- Footer -->
