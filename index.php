@@ -86,9 +86,9 @@
 	    <p class="text-center poppins-regular">¿No tienes cuenta? <a href="view/registration_usuario.php" class="font-weight-bold">Regístrate aquí</a></p>
 	</section>
 
-	<!-- Footer -->
+	<!-- Footer 
 	<footer class="footer">
-	</footer>
+	</footer>-->
 
 
 	<!-- MDBootstrap V5 -->

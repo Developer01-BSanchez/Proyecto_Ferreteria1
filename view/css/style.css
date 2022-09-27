@@ -50,6 +50,7 @@
 	--naranja: #ff8717;
 	--naranjaoscuro: #944700;
 	--naranjaclaro: #8f511f;
+	--navbar: #c3c3c3;
 	
 	--header-height: 60px;
 }
@@ -109,7 +110,7 @@ body,html{
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
-	background-color: var(--grisoscuro);
+	background-color: var(--navbar);
 }
 .header{
 	border-bottom: 1px solid rgba(0, 0, 0, .1);
@@ -122,7 +123,7 @@ body,html{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: var(--naranja);
+	background-color: var(--navbar);
 }
 .header-brand img{
 	max-width: calc(var(--header-height) + 15rem);
@@ -328,7 +329,7 @@ body,html{
 }
 .card-product-price{
 	font-size: 35px;
-	color: #3273dc;
+	color: #d37100;
 }
 .card-product-content{
 	height: 200px;
