@@ -10,7 +10,7 @@ if(!isset($correo)){
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<link rel="icon" href="img/logo-icono.png">
+	<link rel="icon" href="../img/logo-icono.png">
 	<title>Ferreteria E . E</title>
 
 	<!-- Normalize V8.0.1 -->
@@ -134,97 +134,11 @@ if(!isset($correo)){
 	          </div>
 	      </div>
 
-	      <div class="card-product div-bordered bg-white shadow-2">
-	          <figure class="card-product-img">
-	              <img class="img-fluid" src="../img/Martillo.jpg" alt="nombre_platillo">
-	          </figure>
-	          <div class="card-product-body">
-	              <div class="card-product-content">
-	                  <h5 class="text-center fw-bolder">Martillo</h5>
-	                  <p class="card-product-price text-center fw-bolder">$10.00 USD</p>
-	                  <span class="full-box text-center text-muted" style="display: block;">En stock</span>
-	              </div>
-	              <div class="text-center card-product-options" style="padding: 10px 0;">
-	                  <button type="button" class="btn btn-link btn-sm btn-rounded text-success" ><i class="fas fa-shopping-bag fa-fw"></i> &nbsp; Agregar</button>
-	                  &nbsp; &nbsp;
-	                  <a href="details.php" class="btn btn-link btn-sm btn-rounded" ><i class="fas fa-box-open fa-fw"></i> &nbsp; Detalles</a>
-	                  &nbsp; &nbsp;
-	                  <button type="button" class="btn btn-link btn-sm btn-rounded text-muted" ><i class="fas fa-heart fa-fw"></i></button>
-	              </div>
-	          </div>
-	      </div>
-
-	      <div class="card-product div-bordered bg-white shadow-2">
-	          <figure class="card-product-img">
-	              <img class="img-fluid" src="../img/Sierra Circular.png" alt="nombre_platillo">
-	          </figure>
-	          <div class="card-product-body">
-	              <div class="card-product-content">
-	                  <h5 class="text-center fw-bolder">Sierra Circular</h5>
-	                  <p class="card-product-price text-center fw-bolder">$10.00 USD</p>
-	                  <span class="full-box text-center text-muted" style="display: block;">En stock</span>
-	              </div>
-	              <div class="text-center card-product-options" style="padding: 10px 0;">
-	                  <button type="button" class="btn btn-link btn-sm btn-rounded text-success" ><i class="fas fa-shopping-bag fa-fw"></i> &nbsp; Agregar</button>
-	                  &nbsp; &nbsp;
-	                  <a href="details.php" class="btn btn-link btn-sm btn-rounded" ><i class="fas fa-box-open fa-fw"></i> &nbsp; Detalles</a>
-	                  &nbsp; &nbsp;
-	                  <button type="button" class="btn btn-link btn-sm btn-rounded" ><i class="fas fa-heart fa-fw"></i></button>
-	              </div>
-	          </div>
-	      </div>
-
-	      <div class="card-product div-bordered bg-white shadow-2">
-	          <figure class="card-product-img">
-	              <img class="img-fluid" src="../img/Taladro Demoledor.png" alt="nombre_platillo">
-	          </figure>
-	          <div class="card-product-body">
-	              <div class="card-product-content">
-	                  <h5 class="text-center fw-bolder">Taladro Demoledor</h5>
-	                  <p class="card-product-price text-center fw-bolder">$10.00 USD</p>
-	                  <span class="full-box text-center text-muted" style="display: block;">En stock</span>
-	              </div>
-	              <div class="text-center card-product-options" style="padding: 10px 0;">
-	                  <button type="button" class="btn btn-link btn-sm btn-rounded text-success" ><i class="fas fa-shopping-bag fa-fw"></i> &nbsp; Agregar</button>
-	                  &nbsp; &nbsp;
-	                  <a href="details.php" class="btn btn-link btn-sm btn-rounded" ><i class="fas fa-box-open fa-fw"></i> &nbsp; Detalles</a>
-	                  &nbsp; &nbsp;
-	                  <button type="button" class="btn btn-link btn-sm btn-rounded text-muted" ><i class="fas fa-heart fa-fw"></i></button>
-	              </div>
-	          </div>
-	      </div>
-
 	    </div>
 	    <p class="text-center"><a href="menu.php" class="btn btn-primary"><i class="fas fa-hamburger fa-fw"></i> &nbsp; Ir al menu</a></p>
 	</div>
 
 	<hr>
-
-	<!--
-	<div class="container container-web-page">
-	    <div class="row justify-content-md-center">
-	        <div class="col-12 col-md-6">
-	            <figure class="full-box">
-	                <img src="img/registration.png" alt="registration" class="img-fluid">
-	            </figure>
-	        </div>
-	        <div class="w-100"></div>
-	        <div class="col-12 col-md-6">
-	            <h3 class="text-center text-uppercase poppins-regular font-weight-bold">Crea tu cuenta</h3>
-	            <p class="text-center">
-	                Crea tu cuenta para poder realizar pedidos y cotizaciones.
-	            </p>
-	            <p class="text-center">
-	                <a href="registration.html" class="btn btn-primary" >Crear cuenta</a>
-	            </p>
-	        </div>
-	    </div>
-	</div>-->
-
-	<!-- Footer -->
-	<footer class="footer">
-	</footer>
-
 
 	<!-- MDBootstrap V5 -->
 	<script src="../js/mdb.min.js" ></script>

@@ -3,23 +3,23 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<link rel="icon" href="view/img/logo-icono.png">
+	<link rel="icon" href="img/logo-icono.png">
 	<title>Detalles del Producto</title>
 
 	<!-- Normalize V8.0.1 -->
-	<link rel="stylesheet" href="view/css/normalize.css">
+	<link rel="stylesheet" href="css/normalize.css">
 
 	<!-- MDBootstrap V5 -->
-	<link rel="stylesheet" href="view/css/mdb.min.css">
+	<link rel="stylesheet" href="css/mdb.min.css">
 
 	<!-- Font Awesome V5.15.1 -->
-	<link rel="stylesheet" href="view/css/all.css">
+	<link rel="stylesheet" href="css/all.css">
 
 	<!-- Sweet Alert V10.13.0 -->
-	<script src="view/js/sweetalert2.js" ></script>
+	<script src="js/sweetalert2.js" ></script>
 
 	<!-- General Styles -->
-	<link rel="stylesheet" href="view/css/style.css">
+	<link rel="stylesheet" href="css/style.css">
 
 </head>
 <body id="main-body">
@@ -28,7 +28,7 @@
 	<header class="header full-box bg-white">
 	    <div class="header-brand full-box">
 	        <a href="index_cliente.php">
-	            <img src="view/img/logo-escoinfer.png" alt="Designlopers" class="img-fluid">
+	            <img src="img/logo-escoinfer.png" alt="Designlopers" class="img-fluid">
 	        </a>
 	    </div>
 	    <div class="header-options full-box">
@@ -38,17 +38,13 @@
 						<a>Ferreteria Escoinfer Escobillas</a>
 					</li>
 	                <li>
-	                    <a id="inicio" href="index_cliente.php" >Inicio</a>
+	                    <a id="inicio" href="../index.php" >Inicio</a>
 	                </li>
 	                <li>
 	                    <a href="menu.php" >Productos</a>
 	                </li>
 	            </ul>
 	        </nav>
-	        <a href="bag.php" class="header-button full-box text-center" title="Carrito" >
-	            <i class="fas fa-shopping-bag"></i>
-	            <span class="badge bg-primary rounded-pill bag-count" >2</span>
-	        </a>
 
 	        <div class="header-button full-box text-center" id="userMenu" data-mdb-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Nombre de usuario" >
 	            <i class="fas fa-user-circle"></i>
@@ -56,13 +52,10 @@
 	        <div class="dropdown-menu div-bordered popup-login" aria-labelledby="userMenu">
 	            <p class="text-center" style="padding-top: 10px;">
 	                <i class="fas fa-user-circle fa-3x"></i><br>
-	                <small>Nombre de usuario</small>
+	                <small>¿Usuario</small>
 	            </p>
-	            <a class="dropdown-item" href="javascript:void(0);">
-	                <i class="fab fa-dashcube fa-fw"></i> &nbsp; Dashboard
-	            </a>
-	            <a class="dropdown-item" href="controller/cerrar_sesion.php">
-	                <i class="fas fa-sign-out-alt"></i> &nbsp; Cerrar sesión
+	            <a class="dropdown-item" href="login.php">
+	                <i class="fas fa-sign-out-alt"></i> &nbsp; Inciar Sesion
 	            </a>
 	        </div>
 
@@ -82,7 +75,7 @@
 	            <div class="col-12 col-lg-5">
 	                <!--cover-->
 	                <figure class="full-box">
-	                    <img class="img-fluid" src="view/img/herramientas_1.png" alt="platillo_">
+	                    <img class="img-fluid" src="img/herramientas_1.png" alt="platillo_">
 	                </figure>
 
 	                <!-- Galery -->
@@ -92,21 +85,21 @@
 
 	                    <!--cover-->
 	                    <figure class="full-box">
-	                        <a data-fslightbox="gallery" href="view/img/Martillo.jpg">
-	                            <img class="img-fluid" src="view/img/Martillo.jpg" alt="">
+	                        <a data-fslightbox="gallery" href="img/Martillo.jpg">
+	                            <img class="img-fluid" src="img/Martillo.jpg" alt="">
 	                        </a>
 	                    </figure>
 
 	                    <!--otras-->
 	                    <figure class="full-box">
-	                        <a data-fslightbox="gallery" href="view/img/taladro inalambrico.jpg">
-	                            <img class="img-fluid" src="view/img/taladro inalambrico.jpg" alt="">
+	                        <a data-fslightbox="gallery" href="img/taladro inalambrico.jpg">
+	                            <img class="img-fluid" src="img/taladro inalambrico.jpg" alt="">
 	                        </a>
 	                    </figure>
 
 	                    <figure class="full-box">
-	                        <a data-fslightbox="gallery" href="view/img/Taladro Demoledor.png">
-	                            <img class="img-fluid" src="view/img/Taladro Demoledor.png" alt="">
+	                        <a data-fslightbox="gallery" href="img/Taladro Demoledor.png">
+	                            <img class="img-fluid" src="img/Taladro Demoledor.png" alt="">
 	                        </a>
 	                    </figure>
 
@@ -168,12 +161,12 @@
 	
 	
 	<!-- MDBootstrap V5 -->
-	<script src="view/js/mdb.min.js" ></script>
+	<script src="js/mdb.min.js" ></script>
 
 	<!-- fslightbox -->
-	<script src="view/js/fslightbox.js" ></script>
+	<script src="js/fslightbox.js" ></script>
 
 	<!-- General scripts -->
-	<script src="view/js/main.js" ></script>
+	<script src="js/main.js" ></script>
 </body>
 </html>

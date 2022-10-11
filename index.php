@@ -1,5 +1,3 @@
-<?php
-?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -88,15 +86,25 @@
 	<div class="container-fluid container-web-page">
 	    <h3 class="text-center text-uppercase poppins-regular font-weight-bold">Herramientas Manuales</h3>
 	    <div class="container-cards full-box mb-4">
+		
+		<?php
+		$conexion = mysqli_connect('localhost:3308','root','','proyecto_ferreteria') or die("Error en la conexión");
+
+		$sql = "SELECT * FROM producto";
+
+		$resultado = mysqli_query($conexion,$sql) or die("Error en la consulta");
+
+		while($consulta = mysqli_fetch_array($resultado)){
+		?>
 
 	      <div class="card-product div-bordered bg-white shadow-2">
 	          <figure class="card-product-img">
-	              <img class="img-fluid" src="view/img/taladro inalambrico.jpg" alt="nombre_platillo">
+	              <img class="img-fluid" src="<?php echo $consulta['pro_imagen'] ?>">
 	          </figure>
 	          <div class="card-product-body">
 	              <div class="card-product-content">
-	                  <h5 class="text-center fw-bolder">Taladro Inalambrico</h5>
-	                  <p class="card-product-price text-center fw-bolder">$10.00 USD</p>
+	                  <h5 class="text-center fw-bolder"><?php echo $consulta['pro_nombre'] ?></h5>
+	                  <p class="card-product-price text-center fw-bolder"><?php echo "$".$consulta['pro_precio_unidad'] ?></p>
 	                  <span class="full-box text-center text-muted" style="display: block;">En stock</span>
 	              </div>
 	              <div class="text-center card-product-options" style="padding: 10px 0;">
@@ -108,6 +116,9 @@
 	              </div>
 	          </div>
 	      </div>
+	<?php
+	}
+	?>
 
 	    </div>
 	    <p class="text-center"><a href="view/menu.php" class="btn btn-primary"><i class="fas fa-hamburger fa-fw"></i> &nbsp; Ir al menu</a></p>

@@ -53,8 +53,6 @@
 	--navbar: #c3c3c3;
 	
 	--header-height: 60px;
-
-	--img-fondo-login: url(../img/Login-fondo.jpg);
 }
 
 body,html{
@@ -507,8 +505,5 @@ body,html{
 	}
 	#main-body.blocked{
 		overflow: hidden;
-	}
-	#main-body{
-		background-image: url(../img/Login-fondo.jpg);
 	}
 }
