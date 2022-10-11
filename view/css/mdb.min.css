@@ -245,12 +245,12 @@ sup {
 }
 
 a {
-	color: #1266f1;
+	color: #ff8100;
 	text-decoration: underline
 }
 
 a:hover {
-	color: #0e52c1
+	color: #b15800
 }
 
 a:not([href]):not([class]),
@@ -2609,14 +2609,14 @@ textarea.form-control-lg {
 }
 
 .form-check-input:focus {
-	border-color: #1266f1;
+	border-color: #f1aa12;
 	outline: 0;
 	-webkit-box-shadow: 0 0 0 .25rem rgba(18, 102, 241, .25);
 	box-shadow: 0 0 0 .25rem rgba(18, 102, 241, .25)
 }
 
 .form-check-input:checked {
-	background-color: #1266f1
+	background-color: #f1aa12;
 }
 
 .form-check-input:checked[type=checkbox] {
@@ -3206,18 +3206,18 @@ fieldset:disabled .btn {
 }
 
 .btn-primary {
-	border-color: #1266f1
+	border-color: #ffa900
 }
 
 .btn-primary:hover {
-	background-color: #0f57cd;
-	border-color: #0e52c1
+	background-color: #ffa900;
+	border-color: #aa7100
 }
 
 .btn-check:focus+.btn-primary,
 .btn-primary:focus {
 	color: #fff;
-	background-color: #0f57cd;
+	background-color: #ffa900;
 	border-color: #0e52c1;
 	-webkit-box-shadow: 0 0 0 .25rem rgba(54, 125, 243, .5);
 	box-shadow: 0 0 0 .25rem rgba(54, 125, 243, .5)
@@ -3228,7 +3228,7 @@ fieldset:disabled .btn {
 .btn-primary.active,
 .btn-primary:active,
 .show>.btn-primary.dropdown-toggle {
-	background-color: #0e52c1;
+	background-color: #ffa900;
 	border-color: #0e4db5
 }
 
@@ -3992,17 +3992,17 @@ fieldset:disabled .btn {
 
 .btn-link {
 	font-weight: 400;
-	color: #1266f1;
+	color: #7c7c7c;
 	text-decoration: underline
 }
 
 .btn-link:hover {
-	color: #0e52c1
+	color: #7c7c7c;
 }
 
 .btn-link.disabled,
 .btn-link:disabled {
-	color: #757575
+	color: #757575;
 }
 
 .btn-group-lg>.btn,
@@ -15072,14 +15072,14 @@ fieldset:disabled [class*=btn-outline-] {
 
 .btn-primary {
 	color: #fff;
-	background-color: #1266f1
+	background-color: #ffa900
 }
 
 .btn-primary.focus,
 .btn-primary:focus,
 .btn-primary:hover {
 	color: #fff;
-	background-color: #0c56d0
+	background-color: #a56e02
 }
 
 .btn-check:active+.btn-primary,
@@ -15088,7 +15088,7 @@ fieldset:disabled [class*=btn-outline-] {
 .btn-primary:active,
 .show>.btn-primary.dropdown-toggle {
 	color: #fff;
-	background-color: #093d94
+	background-color: #a56e02
 }
 
 .btn-check:active+.btn-primary:focus,

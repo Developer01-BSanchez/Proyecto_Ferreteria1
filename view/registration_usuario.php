@@ -88,7 +88,7 @@
 	                            </div>
 	                            <div class="col-12 col-md-12">
 	                                <div class="form-outline mb-4">
-	                                    <input type="password" class="form-control" name="cliente_clave_1_reg" id="cliente_clave_1" pattern="[a-zA-Z0-9$@.-]{7,100}" maxlength="100" >
+	                                    <input type="password" class="form-control" name="cliente_clave_1_reg" id="cliente_clave_1" pattern="[a-zA-Z0-9$@.-]{2,10}" maxlength="10" required="">
 	                                    <label for="cliente_clave_1" class="form-label">Contraseña <i class="fab fa-font-awesome-alt"></i></label>
 	                                </div>
 	                            </div>
@@ -104,7 +104,7 @@
 	                </fieldset>
 
 	                <p class="text-center" style="margin-top: 40px;">
-	                    <button type="submit" class="btn btn-info btn-sm"><i class="far fa-paper-plane"></i> &nbsp; CREAR CUENTA</button>
+	                    <button type="submit" class="btn btn-primary btn-sm"><i class="far fa-paper-plane"></i> &nbsp; CREAR CUENTA</button>
 	                </p>
 	                <p class="text-center">
 	                    <small>Los campos marcados con <i class="fab fa-font-awesome-alt"></i> son obligatorios</small>
@@ -114,7 +114,7 @@
 	    </div>
 	</div>
 	
-	
+	<script src= "https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<!-- MDBootstrap V5 -->
 	<script src="./js/mdb.min.js" ></script>
 

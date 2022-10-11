@@ -17,9 +17,10 @@ public function login($correo,$clave){
         $tipo_usuario = $resultado['tipo_usuario_id'];
         if($tipo_usuario=='2'){
             $_SESSION['correo']= $correo;
-            header ('location:../view/index_user.php');
+            header ('location:../view/cliente/index_cliente.php');
         }elseif($tipo_usuario=='1'){
-            header ('location:');
+            $_SESSION['correo']= $correo;
+            header ('location:../view/admin/index_admin.php');
         }else{
             header ('location:');
         }
@@ -74,10 +75,21 @@ public function insertarUsuariosProcedimientos($nombre,$contrasena,$cargo){
 	
 }
 public function insertarUsuarios($email,$clave){
-    try{ 
-    $sql="INSERT INTO usuario(usu_email,usu_contrasena,tipo_usuario_id)VALUES('$email','$clave','2')";
-    $this->db->activeConnection()-> prepare($sql)->execute();
-    header("location: ../../index.php");
+    try{
+        $sqlconsultar="SELECT * FROM usuario WHERE usu_email='$email' or usu_contrasena = '$clave'";
+	    $resultado = $this->db->activeConnection()->query($sqlconsultar)->fetch();
+        if($resultado){
+            echo 
+            '<script>
+            alert("El correo o la Contraseña ya existen, por favor ingrese uno nuevo");
+            location.href ="../view/registration_usuario.php"
+            </script>';
+        }else{
+            echo '<script>alert("Usuario Ingresado");</script>';
+            $sql="INSERT INTO usuario(usu_email,usu_contrasena,tipo_usuario_id)VALUES('$email','$clave','2')";
+            $this->db->activeConnection()-> prepare($sql)->execute();
+            header("location: ../view/registration_usuario.php");
+        }
     }
     catch(PDOexception $men){
     var_dump($men->getMessage());
@@ -148,6 +160,7 @@ public function eliminarUsuarios($id){
 }
 ?>
 <p></p>
+<script src=" https://unpkg.com/sweetalert/dist/sweetalert.min.js "></script>
 <script src="../vista/js/jquery.js"></script>
 <script src="../vista/js/bootstrap.bundle.min.js"></script>
 </div>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-09-2022 a las 12:20:09
+-- Tiempo de generación: 11-10-2022 a las 07:05:30
 -- Versión del servidor: 10.1.38-MariaDB
 -- Versión de PHP: 7.3.4
 
@@ -151,6 +151,7 @@ CREATE TABLE `producto` (
   `pro_id` int(11) NOT NULL,
   `pro_nombre` varchar(50) NOT NULL,
   `pro_cantidad` int(11) NOT NULL,
+  `pro_imagen` varchar(5000) NOT NULL,
   `pro_precio_unidad` double NOT NULL,
   `pro_peso` varchar(10) DEFAULT NULL,
   `pro_medidas` varchar(50) DEFAULT NULL,
@@ -164,14 +165,16 @@ CREATE TABLE `producto` (
 -- Volcado de datos para la tabla `producto`
 --
 
-INSERT INTO `producto` (`pro_id`, `pro_nombre`, `pro_cantidad`, `pro_precio_unidad`, `pro_peso`, `pro_medidas`, `pro_fecha_caducidad`, `pro_caracteristicas`, `pro_estado`, `categoria_id`) VALUES
-(1, 'Sikaflex 221 Blanco', 100, 48456, '300 ml', NULL, '2026-07-16', 'Sikaflex®-221 es un adhesivo de poliuretano, monocomponente multipropósito de alta calidad que no escurre. Cura por exposición a la humedad atmosférica para formar un elastómero durable. Está aprobado por la normas tipos ASTM C920 estadounidenses y Especificaciones Federales TT-S-00230C.', 1, 1),
-(2, 'Abrazadera ', 1000, 480, NULL, '1/4 ', NULL, 'Acero Al Carbon Titan', 1, 2),
-(5, 'Codo Reducido', 1000, 1533, NULL, '3/4 x 1/2', NULL, 'Galvanizado Stanprof', 1, 3),
-(6, 'Interruptor Sencillo', 500, 6651, NULL, NULL, NULL, 'Gálica 2 Blanca', 1, 4),
-(7, 'Escalera Aluminio Tijera 3 Peldaños', 50, 250519, NULL, '1.22 Mts', NULL, 'Bstl-4 Tipo Iii 90kg (Verde) Escalumex', 0, 5),
-(8, 'Guante Carnaza Manga Corta', 50, 6303, NULL, NULL, NULL, 'Protección en la muñeca\r\nResistencia a la abrasión\r\nColor: Gris\r\nRefuerzo en Vaqueta, palma y dedos\r\nMaterial: Carnaza y vaqueta\r\nManga: Corta\r\nLongitud: 9,5”\r\nCalibre: 0.9 mm', 1, 6),
-(9, 'Soporte Del Bajante Redondo', 1000, 2839, NULL, NULL, NULL, '2006053 Durman', 1, 7);
+INSERT INTO `producto` (`pro_id`, `pro_nombre`, `pro_cantidad`, `pro_imagen`, `pro_precio_unidad`, `pro_peso`, `pro_medidas`, `pro_fecha_caducidad`, `pro_caracteristicas`, `pro_estado`, `categoria_id`) VALUES
+(1, 'Sikaflex 221 Blanco', 100, '', 48456, '300 ml', NULL, '2026-07-16', 'Sikaflex®-221 es un adhesivo de poliuretano, monocomponente multipropósito de alta calidad que no escurre. Cura por exposición a la humedad atmosférica para formar un elastómero durable. Está aprobado por la normas tipos ASTM C920 estadounidenses y Especificaciones Federales TT-S-00230C.', 1, 1),
+(2, 'Abrazadera ', 1000, '', 480, NULL, '1/4 ', NULL, 'Acero Al Carbon Titan', 1, 2),
+(5, 'Codo Reducido', 1000, '', 1533, NULL, '3/4 x 1/2', NULL, 'Galvanizado Stanprof', 1, 3),
+(6, 'Interruptor Sencillo', 500, '', 6651, NULL, NULL, NULL, 'Gálica 2 Blanca', 1, 4),
+(7, 'Escalera Aluminio Tijera 3 Peldaños', 50, '', 250519, NULL, '1.22 Mts', NULL, 'Bstl-4 Tipo Iii 90kg (Verde) Escalumex', 0, 5),
+(8, 'Guante Carnaza Manga Corta', 50, '', 6303, NULL, NULL, NULL, 'Protección en la muñeca\r\nResistencia a la abrasión\r\nColor: Gris\r\nRefuerzo en Vaqueta, palma y dedos\r\nMaterial: Carnaza y vaqueta\r\nManga: Corta\r\nLongitud: 9,5”\r\nCalibre: 0.9 mm', 1, 6),
+(9, 'Soporte Del Bajante Redondo', 1000, '', 2839, NULL, NULL, NULL, '2006053 Durman', 1, 7),
+(16, 'Tonillo', 1000, '../img/productos/tornillo.jpg', 100, '1', '1', '0000-00-00', '', 1, 2),
+(17, 'Martillo', 200, '../img/productos/Martillo.jpg', 15000, '', '', '0000-00-00', 'Martillo', 1, 3);
 
 -- --------------------------------------------------------
 
@@ -239,6 +242,7 @@ INSERT INTO `tipo_usuario` (`tip_usu_id`, `tip_usu_nombre`) VALUES
 
 CREATE TABLE `usuario` (
   `usu_id` int(11) NOT NULL,
+  `usu_foto` varchar(5000) NOT NULL,
   `usu_email` varchar(50) NOT NULL,
   `usu_contrasena` varchar(30) NOT NULL,
   `tipo_usuario_id` int(11) NOT NULL
@@ -248,16 +252,17 @@ CREATE TABLE `usuario` (
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`usu_id`, `usu_email`, `usu_contrasena`, `tipo_usuario_id`) VALUES
-(1, 'usu01@gmail.com', 'usu01', 2),
-(2, 'usu02@gmail.com', 'usu02', 2),
-(3, 'usu03@gmail.com', 'usu03', 2),
-(4, 'usu04@gmail.com', 'usu04', 3),
-(5, 'usu05@gmail.com', 'usu05', 3),
-(6, 'usu06@gmail.com', 'usu06', 3),
-(7, 'usu07@gmail.com', 'usu07', 1),
-(8, 'usu08@gmail.com', 'usu08', 1),
-(9, 'usu09@gmail.com', 'usu09', 1);
+INSERT INTO `usuario` (`usu_id`, `usu_foto`, `usu_email`, `usu_contrasena`, `tipo_usuario_id`) VALUES
+(1, '', 'usu01@gmail.com', 'usu01', 2),
+(2, '', 'usu02@gmail.com', 'usu02', 2),
+(3, '', 'usu03@gmail.com', 'usu03', 2),
+(4, '', 'usu04@gmail.com', 'usu04', 3),
+(5, '', 'usu05@gmail.com', 'usu05', 3),
+(6, '', 'usu06@gmail.com', 'usu06', 3),
+(7, '', 'usu07@gmail.com', 'usu07', 1),
+(8, '', 'usu08@gmail.com', 'usu08', 1),
+(9, '', 'usu09@gmail.com', 'usu09', 1),
+(10, '', 'brandon@gmail.com', '12345', 2);
 
 -- --------------------------------------------------------
 
@@ -294,17 +299,18 @@ CREATE TABLE `venta` (
   `ven_id` int(11) NOT NULL,
   `ven_fecha` date NOT NULL,
   `ven_monto` double NOT NULL,
+  `ven_estado` varchar(30) DEFAULT NULL,
   `id_cliente` int(11) NOT NULL,
-  `vendedor_id` int(11) NOT NULL
+  `vendedor_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `venta`
 --
 
-INSERT INTO `venta` (`ven_id`, `ven_fecha`, `ven_monto`, `id_cliente`, `vendedor_id`) VALUES
-(1, '2022-08-02', 0, 1, 1),
-(2, '2022-07-13', 0, 2, 2);
+INSERT INTO `venta` (`ven_id`, `ven_fecha`, `ven_monto`, `ven_estado`, `id_cliente`, `vendedor_id`) VALUES
+(1, '2022-08-02', 0, '', 1, 1),
+(2, '2022-07-13', 0, '', 2, 2);
 
 -- --------------------------------------------------------
 
@@ -425,7 +431,7 @@ ALTER TABLE `detalle_venta`
 -- AUTO_INCREMENT de la tabla `producto`
 --
 ALTER TABLE `producto`
-  MODIFY `pro_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `pro_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de la tabla `tipo_documento`
@@ -443,7 +449,7 @@ ALTER TABLE `tipo_usuario`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `usu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `usu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `vendedor`

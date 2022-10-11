@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es" class="semi-dark">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--favicon-->
+	<link rel="icon" href="assets/images/favicon-32x32.png" type="image/png" />
+	<!--plugins-->
+	<link href="../css/admin/assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
+	<link href="../css/admin/assets/plugins/input-tags/css/tagsinput.css" rel="stylesheet" />
+	<link href="../css/admin/assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
+	<link href="../css/admin/assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
+	<!-- loader-->
+	<link href="../css/admin/assets/css/pace.min.css" rel="stylesheet" />
+	<script src="../css/admin/assets/js/pace.min.js"></script>
+	<!-- Bootstrap CSS -->
+	<link href="../css/admin/assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/admin/assets/css/bootstrap-extended.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&amp;display=swap" rel="stylesheet">
+	<link href="../css/admin/assets/css/app.css" rel="stylesheet">
+	<link href="../css/admin/assets/css/icons.css" rel="stylesheet">
+	<!-- Theme Style CSS -->
+	<link rel="stylesheet" href="../css/admin/assets/css/dark-theme.css" />
+	<link rel="stylesheet" href="../css/admin/assets/css/semi-dark.css" />
+	<link rel="stylesheet" href="../css/admin/assets/css/header-colors.css" />
+	<title>Crear un producto</title>
+</head>
+<body>
+    <div class="card">
+        <div class="card-body">
+            <form class="" action="../../controller/registrar_producto.php" method="POST" enctype="multipart/form-data">
+                <h1> Nuevo Producto</h1>
+                <div class="mb-3">
+                    <label class="form-label">Nombre:</label>
+                    <input type="text" class="form-control" placeholder="Ingrese el nombre del producto" required="" name="nombre_producto" id="nombre_producto">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Cantidad:</label>
+                    <input type="number" class="form-control" placeholder="Ingrese la cantidad del producto" required="" name="cantidad_producto" id="cantidad_producto">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Imagen Producto:</label>
+                    <input type="file" class="form-control" name="imagen_producto" id="imagen_producto" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Precio Unidad:</label>
+                   <input type="number" class="form-control" placeholder="Ingrese el precio unitario del producto" required name="precio_producto" id="precio_producto">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Peso:</label>
+                    <input type="text" class="form-control" placeholder="Ingrese el peso del producto" name="peso_producto" id="peso_producto">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Medidas:</label>
+                    <input type="text" class="form-control" placeholder="Ingrese las medidas del producto" name="medidas_producto" id="medidas_producto">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Fecha Caducidad:</label>
+                    <input type="date" class="form-control" name="fecha_c_producto" id="fecha_c_producto">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Caracteristicas:</label>
+                    <input type="text" class="form-control" placeholder="Ingrese las Caracteristicas del producto" required name="caracteristicas_producto" id="caracteristicas_producto">
+                </div>
+                <label class="form-label">Estado:</label>
+                <select class="form-select mb-3" aria-label="Default select example" required name="estado_producto" id="estado_producto">
+                    <option selected>Estado del producto</option>
+                    <option value="1">Activo</option>
+                    <option value="0">Inactivo</option>
+                </select>
+                <label class="form-label">Categoria:</label>
+                <select class="form-select mb-3" aria-label="Default select example" required name="categoria_producto" id="categoria_producto">
+                    <option selected>Categoria del producto</option>
+                    <option value="1">Adhesivos</option>
+                    <option value="2">Maderas y Herrajes</option>
+                    <option value="3">Plomería y tubería</option>
+                    <option value="4">Electricidad, Cables y Alambre</option>
+                    <option value="5">Escaleras, trabajo en alturas</option>
+                    <option value="6">Protección Personal (EPP) y Señalización</option>
+                    <option value="7">Tejas, Cielo Raso, Drywall</option>
+                </select>
+                <center>
+                    <button class="btn btn-warning px-5" type="submit">Agregar</button>
+                    <a class="btn btn-secondary px-5" href="index_admin.php">Volver</a>
+                </center>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
